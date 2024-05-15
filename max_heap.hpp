@@ -72,7 +72,7 @@ void PriorityQueueMax<E,P>::heapify_up(int u)
         P key_u=what_key(u);                    //priorytet naszego element
         P key_parent=what_key((u - 1) / 2);     //priorytet rodzica
         //jezeli key rodzica jest wiekszy od key dziecka prawidłowa pozycja w kopcu, break
-        if((key_u <= key_parent)){break;}  //<= fifo
+        if((key_u < key_parent)){break;}  //
         //inczej zamien rodzica i dziecko miejscami
         Dynamic<E,P>::wymiana(u, ((u - 1) / 2));
         u = (u - 1) / 2;    //idzeimy w gore w drzewie
